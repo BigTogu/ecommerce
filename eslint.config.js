@@ -17,7 +17,7 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tseslint,
-      import: importPlugin, // 🔥 REGISTRO EXPLÍCITO DEL PLUGIN IMPORT
+      import: importPlugin,
     },
     rules: {
       "no-console": ["error", { allow: ["warn", "error"] }],
