@@ -1,4 +1,6 @@
-export default function Home() {
+import React, { FC } from 'react';
+
+const Home: FC = () => {
   return (
     <div>
       <main>
@@ -7,6 +9,7 @@ export default function Home() {
       <footer>
         footer
       </footer>
-    </div>
-  );
-}
+    </div>);
+};
+
+export default Home;
