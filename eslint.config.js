@@ -1,30 +1,36 @@
 import pluginJs from "@eslint/js";
-import pluginReact from "eslint-plugin-react";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import importPlugin from "eslint-plugin-import";
+import { default as pluginReact } from "eslint-plugin-react";
 import globals from "globals";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
 export default [
   {
     files: ["**/*.{ts,tsx}"],
+
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
       parser: tsParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
       globals: globals.browser,
     },
     plugins: {
       "@typescript-eslint": tseslint,
       import: importPlugin,
+      pluginReact,
     },
     rules: {
       "no-console": ["error", { allow: ["warn", "error"] }],
       "prefer-const": "error",
       "func-style": ["error", "expression"],
       "arrow-parens": ["error", "always"],
-      "react/react-in-jsx-scope": "off",
 
       "@typescript-eslint/no-empty-interface": "warn",
       "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
@@ -32,9 +38,11 @@ export default [
       "@typescript-eslint/explicit-module-boundary-types": "error",
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
 
-      "react/jsx-uses-react": "error",
       "react/jsx-uses-vars": "error",
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-uses-react": "off",
       "react/jsx-sort-props": ["error", { ignoreCase: true }],
+      "react/jsx-filename-extension": ["error", { extensions: [".ts", ".tsx"] }],
 
       "comma-dangle": "off",
       "object-curly-newline": "off",
@@ -44,18 +52,20 @@ export default [
       "no-plusplus": "off",
       "no-undef": "warn",
 
-      "import/order": [
-        "warn",
-        { groups: ["external", "builtin", "internal", "sibling", "parent", "index"] },
-      ],
+      "import/order": ["warn", { groups: ["external", "builtin", "internal", "sibling", "parent", "index"] }],
     },
   },
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
+  pluginReact.configs.flat["jsx-runtime"],
   {
     settings: {
       react: {
-        version: "17",
+        version: "19",
+        createClass: "createReactClass",
+        pragma: "React",
+        fragment: "Fragment",
+        flowVersion: "0.53",
       },
     },
   },
