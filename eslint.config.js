@@ -9,6 +9,7 @@ import globals from "globals";
 export default [
   {
     files: ["**/*.{ts,tsx}"],
+
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
