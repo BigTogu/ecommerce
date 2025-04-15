@@ -7,6 +7,5 @@
   "trailingComma": "all",
   "bracketSpacing": true,
   "arrowParens": "always",
-  "endOfLine": "auto",
-  "indent": 2
-} 
+  "endOfLine": "lf"
+}
