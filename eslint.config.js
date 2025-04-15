@@ -1,8 +1,8 @@
 import pluginJs from "@eslint/js";
-import pluginReact from "eslint-plugin-react";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import importPlugin from "eslint-plugin-import";
+import pluginReact from "eslint-plugin-react";
 import globals from "globals";
 
 /** @type {import('eslint').Linter.FlatConfig[]} */
@@ -17,7 +17,7 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tseslint,
-      import: importPlugin, // 🔥 REGISTRO EXPLÍCITO DEL PLUGIN IMPORT
+      import: importPlugin,
     },
     rules: {
       "no-console": ["error", { allow: ["warn", "error"] }],
