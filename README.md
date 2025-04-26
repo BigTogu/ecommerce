@@ -19,7 +19,7 @@ Este es un proyecto de ecommerce moderno desarrollado con [Next.js](https://next
 1. **Clona este repositorio:**
 
    ```bash
-   git clone https://github.com/tu-usuario/tu-proyecto-ecommerce.git
+   git clone https://github.com/BigTogu/ecommerce.git
    cd tu-proyecto-ecommerce
    ```
 
