@@ -2,8 +2,6 @@ on:
   push:
     branches:
       - main
-      - develop
-      - "feature/**"
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -29,3 +27,9 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+
+      - name: Wait for SonarQube Quality Gate
+        uses: SonarSource/sonar-quality-gate-action@v2
+        with:
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
+          sonar-host-url: ${{ secrets.SONAR_HOST_URL }}
