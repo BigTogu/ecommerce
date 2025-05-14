@@ -1,4 +1,5 @@
 import { JSX, ReactNode } from "react";
+import { barlow, playfair, roboto } from "./fonts";
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,7 +9,7 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className={`${barlow.variable} ${roboto.variable} ${playfair.variable}`}>{children}</body>
     </html>
   );
 }
