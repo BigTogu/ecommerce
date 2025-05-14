@@ -1,5 +1,6 @@
 import { JSX, ReactNode } from "react";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -8,7 +9,7 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>{children}<Footer /></body>
     </html>
   );
 }
