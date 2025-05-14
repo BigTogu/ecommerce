@@ -16,6 +16,11 @@ export default {
         accent: "#252525",
         hover: "#BEAF87",
       },
+      fontFamily: {
+        display: ["var(--font-barlow)"],
+        serif: ["var(--font-playfair)"],
+        base: ["var(--font-roboto)"],
+      },
     },
   },
   plugins: [],
