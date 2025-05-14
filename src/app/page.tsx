@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const Home: FC = () => {
   return (
-    <div className="font-base">
+    <div>
       <main>
         <p>main</p>
       </main>
