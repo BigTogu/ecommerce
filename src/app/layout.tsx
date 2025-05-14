@@ -9,7 +9,7 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang="es">
-      <body className={`${barlow.variable} ${roboto.variable} ${playfair.variable} font-base`}>{children}</body>
+      <body className={`${barlow.variable} ${roboto.variable} ${playfair.variable}`}>{children}</body>
     </html>
   );
 }
