@@ -1,26 +1,33 @@
 import { FC } from "react";
+import { AnimatedUnderlineLink } from "../UI/AnimatedUnderlineLink/AnimatedUnderlineLink";
+import { CONTACT_EMAIL, SOCIAL_LINKS } from "@/utils/constants";
 
 const Footer: FC = () => {
-    return (
-      <footer className="bg-[#1F1F1F] text-white py-8 px-6 flex flex-col md:flex-row justify-between items-center text-xs tracking-widest">
-        <div className="flex flex-col items-center md:items-start gap-2 mb-4 md:mb-0">
-          <a className="text-white hover:underline" href="mailto:hola@loucobos.com">
-            HOLA@LOUCOBOS.COM
-          </a>
-          <p className="text-gray-500">DESIGN BY LOU COBOS & DEVELOPED BY SILVIA KENAAN</p>
+  return (
+    <footer className="w-full bg-accent text-sm uppercase font-display tracking-[0.2em]">
+      <div className="container mx-auto px-6 py-10 flex justify-between">
+        <div className="flex flex-col gap-10">
+          <address className="not-italic">
+            <AnimatedUnderlineLink href={`mailto:${CONTACT_EMAIL}`} label={CONTACT_EMAIL.toUpperCase()} />
+          </address>
+          <p className="text-textTertiary">Design by Lou Cobos & Developed by Silvia Kenaan</p>
         </div>
-  
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex gap-6">
-            <a className="hover:underline" href="#">LINKEDIN</a>
-            <a className="hover:underline" href="#">BEHANCE</a>
-            <a className="hover:underline" href="#">INSTAGRAM</a>
-          </div>
-          <p className="text-gray-500">@LOU COBOS 2025</p>
+
+        <div className="flex flex-col gap-10 text-end">
+          <nav
+            aria-label="Social Media"
+            className="flex flex-wrap gap-4 text-textSecondary justify-end"
+            role="navigation"
+          >
+            {SOCIAL_LINKS.map(({ label, href }) => (
+              <AnimatedUnderlineLink ariaLabel={`Visit Lou Cobos on ${label}`} href={href} key={label} label={label} />
+            ))}
+          </nav>
+          <p className="text-textTertiary">&copy; Lou Cobos 2025</p>
         </div>
-      </footer>
-    );
-  }
-  
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;
