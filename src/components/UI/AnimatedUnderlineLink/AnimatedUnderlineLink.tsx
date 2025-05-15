@@ -8,18 +8,16 @@ interface Props {
   href: string;
   label: string;
   ariaLabel?: string;
-  key?: string;
 }
 
-export const AnimatedUnderlineLink = ({ href, label, ariaLabel, key }: Props): JSX.Element => {
+export const AnimatedUnderlineLink = ({ href, label, ariaLabel }: Props): JSX.Element => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <Link
-      aria-label={ariaLabel || label}
+      aria-label={ariaLabel ?? label}
       className="relative w-fit block text-textSecondary focus:outline-none focus-visible:outline-hover focus-visible:rounded-sm"
       href={href}
-      key={key ? key : undefined}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
