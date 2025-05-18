@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { AnimatedUnderlineLink } from "../UI/AnimatedUnderlineLink/AnimatedUnderlineLink";
+import { AnimatedUnderlineAnchor } from "../UI/AnimatedUnderlineAnchor/AnimatedUnderlineAnchor";
 import { CONTACT_EMAIL, SOCIAL_LINKS } from "@/utils/constants";
 
 const Footer: FC = () => {
@@ -8,7 +8,12 @@ const Footer: FC = () => {
       <div className="container mx-auto px-6 py-10 flex justify-between">
         <div className="flex flex-col gap-10">
           <address className="not-italic">
-            <AnimatedUnderlineLink href={`mailto:${CONTACT_EMAIL}`} label={CONTACT_EMAIL.toUpperCase()} />
+            <AnimatedUnderlineAnchor
+              href={`mailto:${CONTACT_EMAIL}`}
+              label={CONTACT_EMAIL.toUpperCase()}
+              rel=""
+              target="_self"
+            />
           </address>
           <p className="text-textTertiary">Design by Lou Cobos & Developed by Silvia Kenaan</p>
         </div>
@@ -20,7 +25,12 @@ const Footer: FC = () => {
             role="navigation"
           >
             {SOCIAL_LINKS.map(({ label, href }) => (
-              <AnimatedUnderlineLink ariaLabel={`Visit Lou Cobos on ${label}`} href={href} key={label} label={label} />
+              <AnimatedUnderlineAnchor
+                ariaLabel={`Visit Lou Cobos on ${label}`}
+                href={href}
+                key={label}
+                label={label}
+              />
             ))}
           </nav>
           <p className="text-textTertiary">&copy; Lou Cobos 2025</p>
