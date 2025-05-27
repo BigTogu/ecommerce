@@ -1,8 +1,8 @@
 import { JSX } from "react";
 import { SelectableFilterButton } from "../UI/SelectableFilterButton/SelectableFilterButton";
-import { CATEGORY_FILTER_OPTIONS } from "@/services/constants";
 import { ProjectsFilters } from "@/services/services/projects";
 import { Category } from "@/types/projects";
+import { CATEGORY_FILTER_OPTIONS } from "@/utils/constants";
 import { addItem, removeItem } from "@/utils/helpers";
 
 interface Props {
