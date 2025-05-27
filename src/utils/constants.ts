@@ -8,11 +8,21 @@ export const SOCIAL_LINKS = [
 ];
 
 export const CATEGORY_FILTER_OPTIONS: { value: Category; label: string }[] = [
-  { value: Category.FIRST, label: "First" },
-  { value: Category.SECOND, label: "Second" },
-  { value: Category.THIRD, label: "Third" },
-  { value: Category.FOURTH, label: "Fourth" },
-  { value: Category.FIFTH, label: "Fifth" },
-  { value: Category.SIXTH, label: "Sixth" },
-  { value: Category.SEVENTH, label: "Seventh" },
+  { value: Category.WEB, label: "WEB · UI/UX" },
+  { value: Category.DIGITAL, label: "DIGITAL" },
+  { value: Category.VIDEO, label: "VÍDEO/ANIMACIÓN" },
+  { value: Category.GRAPHIC, label: "GRÁFICO" },
+  { value: Category.BRANDING, label: "BRANDING" },
+  { value: Category.EDITORIAL, label: "EDITORIAL" },
+  { value: Category.PACKAGING, label: "PACKAGING" },
+  { value: Category.COMMUNICATION, label: "COMUNICACIÓN" },
 ];
+
+export const ALL_CATEGORIES_LABEL = "TODOS";
+
+export const colors = {
+  background: "#FFFFFF",
+  textPrimary: "#000000",
+  textSecondary: "#FFFFFF",
+  hover: "#BEAF87",
+};

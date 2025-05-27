@@ -14,7 +14,7 @@ const Home: FC = () => {
   });
 
   return (
-    <div className="flex flex-col gap-2 align-center justify-center w-full">
+    <div className="flex flex-col gap-2 ">
       <h1 className="text-4xl font-bold">Proyectos</h1>
       <FilterByCategory
         onChange={(updatedFilters) => setSelectedFilters((prevFilters) => ({ ...prevFilters, ...updatedFilters }))}

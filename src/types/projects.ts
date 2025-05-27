@@ -7,11 +7,12 @@ export interface Project {
 }
 
 export enum Category {
-  FIRST = "first",
-  SECOND = "second",
-  THIRD = "third",
-  FOURTH = "fourth",
-  FIFTH = "fifth",
-  SIXTH = "sixth",
-  SEVENTH = "seventh",
+  WEB = "WEB · UI/UX",
+  DIGITAL = "DIGITAL",
+  VIDEO = "VÍDEO/ANIMACIÓN",
+  GRAPHIC = "GRÁFICO",
+  BRANDING = "BRANDING",
+  EDITORIAL = "EDITORIAL",
+  PACKAGING = "PACKAGING",
+  COMMUNICATION = "COMUNICACIÓN",
 }
