@@ -1,29 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { JSX, ReactNode, useState } from "react";
+import { JSX, useState } from "react";
 
 interface Props {
   href: string;
   label: string;
-  icon?: ReactNode;
   ariaLabel?: string;
+  target?: "_blank" | "_self";
+  rel?: string;
 }
 
-export const AnimatedUnderlineLink = ({ href, label, icon, ariaLabel }: Props): JSX.Element => {
+export const AnimatedUnderlineAnchor = ({
+  href,
+  label,
+  ariaLabel,
+  target = "_blank",
+  rel = "noopener noreferrer",
+}: Props): JSX.Element => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <Link
+    <a
       aria-label={ariaLabel ?? label}
-      className="relative w-fit flex items-center text-textPrimary focus:outline-none focus-visible:outline-hover focus-visible:rounded-sm"
+      className="relative w-fit block text-textSecondary focus:outline-none focus-visible:outline-hover focus-visible:rounded-sm"
       href={href}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      rel={rel}
+      target={target}
     >
-      <span>{label}</span>
-      {icon && <span>{icon}</span>}
+      {label}
       <motion.span
         animate={{ scaleX: isHovered ? 1 : 0 }}
         className="absolute bottom-0 left-0 h-[2px] bg-hover origin-left"
@@ -31,6 +38,6 @@ export const AnimatedUnderlineLink = ({ href, label, icon, ariaLabel }: Props): 
         style={{ width: "50%" }}
         transition={{ duration: 0.3 }}
       />
-    </Link>
+    </a>
   );
 };
