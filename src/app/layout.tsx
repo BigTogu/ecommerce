@@ -1,7 +1,8 @@
+import Footer from "@/components/Footer";
 import { JSX, ReactNode } from "react";
 import { barlow, playfair, roboto } from "./fonts";
-import Footer from "@/components/Footer";
 import "./globals.css";
+import ReactQueryProvider from "./QueryClientProvider";
 
 export default function RootLayout({
   children,
@@ -11,8 +12,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${barlow.variable} ${roboto.variable} ${playfair.variable}`}>
-        {children}
-        <Footer />
+        <ReactQueryProvider>
+          {children}
+          <Footer />
+        </ReactQueryProvider>
       </body>
     </html>
   );
