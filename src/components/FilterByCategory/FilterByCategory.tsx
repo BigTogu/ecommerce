@@ -28,7 +28,7 @@ export default function FilterByCategory({ onChange, selectedFilters }: Props): 
   const handleResetFilters = () => onChange({ category: [] });
 
   return (
-    <section className="flex flex-wrap gap-x-7  gap-y-4 justify-center items-center">
+    <section className="flex flex-wrap gap-x-7 gap-y-4 justify-center items-center w-1/2 mx-auto mb-24 px-4">
       <SelectableFilterButton
         isSelected={selectedCategories.length === 0}
         label={ALL_CATEGORIES_LABEL}
