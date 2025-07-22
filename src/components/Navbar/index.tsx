@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FC, useState } from "react";
-import { NavItem } from "../UI/NavItem/NavItem";
+import { NavItem } from "@/components/UI/NavItem/NavItem";
 import { LOGO, NAVITEMS } from "@/utils/constants";
 
 const NavBar: FC = () => {

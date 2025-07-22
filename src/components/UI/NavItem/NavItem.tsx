@@ -1,9 +1,9 @@
 "use client";
 
 import { ReactNode, memo } from "react";
-import { AnimatedUnderlineLink } from "../AnimatedUnderlineLink/AnimatedUnderlineLink";
-import { Dropdown } from "../Dropdown/Dropdown";
-import { DropdownWrapper } from "../DropdownWrapper/DropdownWrapper";
+import { AnimatedUnderlineLink } from "@/components/UI/AnimatedUnderlineLink/AnimatedUnderlineLink";
+import { Dropdown } from "@/components/UI/Dropdown/Dropdown";
+import { DropdownWrapper } from "@/components/UI/DropdownWrapper/DropdownWrapper";
 import { NavItemType } from "@/types/navbar";
 
 interface Props {

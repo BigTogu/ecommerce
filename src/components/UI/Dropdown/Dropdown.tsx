@@ -1,6 +1,6 @@
 "use client";
 import { JSX, memo } from "react";
-import { AnimatedUnderlineLink } from "../AnimatedUnderlineLink/AnimatedUnderlineLink";
+import { AnimatedUnderlineLink } from "@/components/UI/AnimatedUnderlineLink/AnimatedUnderlineLink";
 
 interface DropdownItem {
   label: string;

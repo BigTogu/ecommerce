@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { AnimatedUnderlineAnchor } from "../UI/AnimatedUnderlineAnchor/AnimatedUnderlineAnchor";
+import { AnimatedUnderlineAnchor } from "@/components/UI/AnimatedUnderlineAnchor/AnimatedUnderlineAnchor";
 import { CONTACT_EMAIL, SOCIAL_LINKS } from "@/utils/constants";
 
 const Footer: FC = () => {
