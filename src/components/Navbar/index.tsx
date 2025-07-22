@@ -22,8 +22,18 @@ const NavBar: FC = () => {
         <ul className="flex items-center gap-6">
           {NAVITEMS.map((item) => {
             return (
-              <li key={item.label}>
-                <NavItem isActive={activeItem === item.label} item={item} onHover={() => setActiveItem(item.label)} />
+              <li
+                key={item.label}
+                onFocus={() => setActiveItem(item.label)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setActiveItem(item.label);
+                  }
+                }}
+                onMouseEnter={() => setActiveItem(item.label)}
+              >
+                <NavItem isActive={activeItem === item.label} item={item} />
               </li>
             );
           })}

@@ -9,25 +9,12 @@ import { NavItemType } from "@/types/navbar";
 interface Props {
   item: NavItemType;
   isActive: boolean;
-  onHover: () => void;
 }
 
-export const NavItem = memo(({ item, isActive, onHover }: Props) => {
+export const NavItem = memo(({ item, isActive }: Props) => {
   const hasDropdown = Boolean(item.icon);
   return (
-    <div
-      aria-expanded={isActive}
-      aria-haspopup="true"
-      className="relative outline-none focus:outline-none"
-      onFocus={onHover}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onHover();
-        }
-      }}
-      onMouseEnter={onHover}
-    >
+    <div className="relative outline-none focus:outline-none">
       <AnimatedUnderlineLink href={item.link} icon={item.icon} label={item.label} />
 
       {isActive && hasDropdown && (
