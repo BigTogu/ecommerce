@@ -8,14 +8,14 @@ export const SOCIAL_LINKS = [
 ];
 
 export const CATEGORY_FILTER_OPTIONS: { value: Category; label: string }[] = [
-  { value: Category.WEB, label: "WEB · UI/UX" },
-  { value: Category.DIGITAL, label: "DIGITAL" },
-  { value: Category.VIDEO, label: "VÍDEO/ANIMACIÓN" },
-  { value: Category.GRAPHIC, label: "GRÁFICO" },
-  { value: Category.BRANDING, label: "BRANDING" },
-  { value: Category.EDITORIAL, label: "EDITORIAL" },
-  { value: Category.PACKAGING, label: "PACKAGING" },
-  { value: Category.COMMUNICATION, label: "COMUNICACIÓN" },
+  { value: Category.WEB, label: Category.WEB },
+  { value: Category.DIGITAL, label: Category.DIGITAL },
+  { value: Category.VIDEO, label: Category.VIDEO },
+  { value: Category.GRAPHIC, label: Category.GRAPHIC },
+  { value: Category.BRANDING, label: Category.BRANDING },
+  { value: Category.EDITORIAL, label: Category.EDITORIAL },
+  { value: Category.PACKAGING, label: Category.PACKAGING },
+  { value: Category.COMMUNICATION, label: Category.COMMUNICATION },
 ];
 
 export const ALL_CATEGORIES_LABEL = "TODOS";
