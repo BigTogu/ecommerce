@@ -1,0 +1,46 @@
+"use client";
+
+import Link from "next/link";
+import { FC, useState } from "react";
+import { NavItem } from "@/components/UI/NavItem/NavItem";
+import { LOGO, NAVITEMS } from "@/utils/constants";
+
+const NavBar: FC = () => {
+  const [activeItem, setActiveItem] = useState<string | null>(null);
+
+  return (
+    <header className="w-full font-display text-lg uppercase tracking-[0.2em]">
+      <nav
+        aria-label="Main navigation"
+        className="container mx-auto flex items-center justify-between px-6 py-8"
+        onMouseLeave={() => setActiveItem(null)}
+      >
+        <Link className="focus:outline-none focus-visible:outline-hover focus-visible:rounded-sm" href={LOGO.link}>
+          {LOGO.name}
+        </Link>
+
+        <ul className="flex items-center gap-6">
+          {NAVITEMS.map((item) => {
+            return (
+              <li
+                key={item.label}
+                onFocus={() => setActiveItem(item.label)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setActiveItem(item.label);
+                  }
+                }}
+                onMouseEnter={() => setActiveItem(item.label)}
+              >
+                <NavItem isActive={activeItem === item.label} item={item} />
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default NavBar;

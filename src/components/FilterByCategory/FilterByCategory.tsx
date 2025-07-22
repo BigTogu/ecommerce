@@ -1,5 +1,5 @@
 import { JSX, useMemo } from "react";
-import { SelectableFilterButton } from "../UI/SelectableFilterButton/SelectableFilterButton";
+import { SelectableFilterButton } from "@/components/UI/SelectableFilterButton/SelectableFilterButton";
 import { ProjectsFilters } from "@/services/services/projects";
 import { Category } from "@/types/projects";
 import { ALL_CATEGORIES_LABEL, CATEGORY_FILTER_OPTIONS } from "@/utils/constants";

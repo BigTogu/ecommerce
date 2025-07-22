@@ -1,4 +1,4 @@
-import { projects } from "../data/projects";
+import { projects } from "@/services/data/projects";
 import { Category } from "@/types/projects";
 
 export interface ProjectsFilters {

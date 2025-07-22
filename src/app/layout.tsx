@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import NavBar from "@/components/Navbar";
 import { JSX, ReactNode } from "react";
 import { barlow, playfair, roboto } from "./fonts";
 import "./globals.css";
@@ -13,6 +14,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={`${barlow.variable} ${roboto.variable} ${playfair.variable}`}>
         <ReactQueryProvider>
+          <NavBar />
           {children}
           <Footer />
         </ReactQueryProvider>
