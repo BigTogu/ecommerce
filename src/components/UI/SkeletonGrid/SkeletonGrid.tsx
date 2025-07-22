@@ -7,7 +7,11 @@ export const SkeletonGrid = (): JSX.Element => {
   return (
     <div className="columns-1 sm:columns-2 gap-8 space-y-8 max-w-4xl mx-auto">
       {fixedHeights.map((height, idx) => (
-        <div className="break-inside-avoid bg-gray-200 animate-pulse" key={idx} style={{ height: `${height}px` }} />
+        <div
+          className="break-inside-avoid bg-gray-200 animate-pulse"
+          key={`${height}-${idx}`}
+          style={{ height: `${height}px` }}
+        />
       ))}
     </div>
   );

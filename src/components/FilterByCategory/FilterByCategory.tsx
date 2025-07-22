@@ -10,7 +10,7 @@ interface Props {
   selectedFilters: ProjectsFilters;
 }
 
-export default function FilterByCategory({ onChange, selectedFilters }: Props): JSX.Element {
+export default function FilterByCategory({ onChange, selectedFilters }: Readonly<Props>): JSX.Element {
   const { category: selectedCategories } = selectedFilters;
 
   const selectedCategorySet = useMemo(() => new Set(selectedCategories), [selectedCategories]);
