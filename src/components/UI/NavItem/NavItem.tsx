@@ -27,8 +27,6 @@ export const NavItem = memo(({ item, isActive, onHover }: Props) => {
         }
       }}
       onMouseEnter={onHover}
-      role="button"
-      tabIndex={0}
     >
       <AnimatedUnderlineLink href={item.link} icon={item.icon} label={item.label} />
 
