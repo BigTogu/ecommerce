@@ -16,7 +16,9 @@ export const NavItem = memo(({ item, isActive, onHover }: Props) => {
   const hasDropdown = Boolean(item.icon);
   return (
     <div
-      className="relative"
+      aria-expanded={isActive}
+      aria-haspopup="true"
+      className="relative outline-none focus:outline-none"
       onFocus={onHover}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {

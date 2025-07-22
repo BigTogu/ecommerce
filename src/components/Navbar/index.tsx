@@ -15,7 +15,9 @@ const NavBar: FC = () => {
         className="container mx-auto flex items-center justify-between px-6 py-8"
         onMouseLeave={() => setActiveItem(null)}
       >
-        <Link href={LOGO.link}>{LOGO.name}</Link>
+        <Link className="focus:outline-none focus-visible:outline-hover focus-visible:rounded-sm" href={LOGO.link}>
+          {LOGO.name}
+        </Link>
 
         <ul className="flex items-center gap-6">
           {NAVITEMS.map((item) => {
